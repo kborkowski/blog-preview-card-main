@@ -1,0 +1,81 @@
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --grey-500: hsl(0, 0%, 42%);
+    --grey-950: hsl(0, 0%, 7%);
+
+    --space-50: 4px;
+    --space-100: 8px;
+    --space-150: 12px;
+    --space-300: 24px;
+
+    --radius-lg: 20px;
+    --radius-sm: 10px;
+    --radius-xs: 4px;
+
+    --text-preset-1-lg: 24px;
+    --text-preset-2-lg: 16px;
+    --text-preset-3-lg: 14px;
+    --test-preset-1-sm: 20px;
+    --text-preset-2-sm: 14px;
+    --text-preset-3-sm: 12px;
+
+/* @link https://utopia.fyi/clamp/calculator?a=375,432,20—24|14—16|12—14&p=text-preset */
+
+  --text-preset-1: clamp(var(--text-preset-1-sm), -0.3947rem + 7.0175vw, var(--text-preset-1-lg));
+  --text-preset-2: clamp(var(--text-preset-2-sm), 0.0526rem + 3.5088vw, var(--text-preset-2-lg));
+  --text-preset-3: clamp(var(--text-preset-3-sm), -0.0724rem + 3.5088vw, var(--text-preset-3-lg));
+
+
+    --line-preset-1:1.5;
+
+    --family-sans: "Figtree", sans-serif;
+
+    --max-width: 384px;
+}
+
+* {
+  box-sizing: border-box;
+  margin:0;
+    padding:0;
+}
+
+body {
+  font-family: var(--family-sans);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: var(--text-preset-2);
+  background-color: var(--yellow);
+  color:var(--grey-500);
+  line-height: var(--line-preset-1);
+}
+
+h2 {
+    font-size: var(--text-preset-1);
+    font-weight: 800;
+    color: var(--grey-950);
+}
+
+time {
+    font-size: var(--text-preset-3);
+    color: var(--grey-950);
+    display:block;
+}
+
+img, picture {
+    display: block;
+    max-width: 100%;
+}
+
+.flow > * + * {
+        margin-block-start: var(--flow-space, var(--space-300));
+    }
+
+    .challenge-wrapper {
+        --max-child-width: var(--max-width, 320px);
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        padding: var(--space-300) max(var(--space-300), calc(50% - var(--max-child-width)/2));
+    }
