@@ -115,6 +115,7 @@ picture {
 .card__image {
   border-radius: var(--radius-sm);
   overflow: hidden;
+  margin-block-end: var(--space-300);
 
   img {
     height: 200px;
