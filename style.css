@@ -109,6 +109,7 @@ picture {
   border: 1px solid var(--grey-950);
   box-shadow: 8px 8px 0 var(--black);
   padding: var(--space-300);
+  position: relative;
 }
 
 .card__image {
@@ -132,6 +133,11 @@ picture {
 
   &:hover, &:focus {
     color: var(--yellow);
+    &::before {
+    content: "";
+    position: absolute;
+    inset:0;
+  }
   }
 }
 
@@ -139,6 +145,7 @@ picture {
   color: var(--grey-950);
   font-size: var(--text-preset-3-lg);
   font-weight: 800;
+  
 
   img {
     border-radius: 50%;
@@ -146,4 +153,14 @@ picture {
     height: 32px;
     object-fit: cover;
   }
+}
+
+.label {
+  color: var(--grey-950);
+  background-color: var(--yellow);
+  font-size: var(--text-preset-3);
+  font-weight: 800;
+  padding: var(--space-50) var(--space-150);
+  border-radius: var(--radius-xs);
+  width: fit-content;
 }
