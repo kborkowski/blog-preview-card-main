@@ -155,6 +155,10 @@ picture {
   }
 }
 
+address {
+  font-style: normal;
+}
+
 .label {
   color: var(--grey-950);
   background-color: var(--yellow);
