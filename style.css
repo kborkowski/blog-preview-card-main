@@ -72,7 +72,15 @@ img, picture {
         margin-block-start: var(--flow-space, var(--space-300));
     }
 
-    .challenge-wrapper {
+.cluster {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--cluster-space, var(--space-150));
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+.challenge-wrapper {
         --max-child-width: var(--max-width, 320px);
         display: grid;
         place-items: center;
